@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("sesifoto.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container{
+  background: rgba(255, 0, 0, 0.38);
+  width: 400px;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+h1{
+  color: white;
+  margin-bottom: 25px;
+  font-size: 2.5rem;
+}
+
+.peso{
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.alerta-topo{
+  position: absolute;
+  top: 30px;
+  width: 90%;
+  max-width: 700px;
+  background: red;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 15px;
+  border: 5px solid white;
+  box-shadow: 0 0 30px red;
+  animation: piscar 0.8s infinite;
+  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes piscar{
+
+  0%{
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50%{
+    opacity: 0.6;
+    transform: scale(1.03);
+  }
+
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.botoes{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button{
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#addBtn{
+  background: darkred;
+  color: white;
+}
+
+#addBtn:hover{
+  background:darkred;
+}
+
+#removeBtn{
+  background: darkred;
+  color: white;
+}
+
+#removeBtn:hover{
+  background: darkred;
+}
+
+#resetBtn{
+  background: darkred;
+  color: white;
+}
+
+#resetBtn:hover{
+  background: darkred;
+}
+
+button:disabled{
+  background: gray;
+  cursor: not-allowed;
+}
